@@ -12,8 +12,10 @@ body {
     margin-right: auto
 }
 
-header {
-	
+header { 
+   text-align: center;
+   margin; 5 px;
+   padding: 10px 10px 10px 10px;
 }
 
 footer {
