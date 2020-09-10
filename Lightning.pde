@@ -5,7 +5,7 @@ void setup()
 void draw()
 {
   float endX = 250;
-  float endY = 500;
+  float endY = 0;
   float startX = 250;
   float startY = 160;
   stroke(0,0,0);
@@ -20,21 +20,26 @@ void draw()
   rect(165,400,180,30);
   rect(190,430,20,70);
   rect(300,430,20,70);
+  stroke((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
+  while(endY <= 380)
+  {
+    endX = (int)(startX) + ((int)(Math.random()*10)-4.5);
+    endY = (int)(startY) + (9 +(int)(Math.random()*17));
+    line(startX,startY,endX,endY);
+    startX = endX;
+    startY = endY;
+  }
 }
 
 void mousePressed()
 {
   float endX = 250;
-  float endY = 500;
-  float startX = 250;
-  float startY = 160;
   stroke((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));
   while(endX <= 280)
   {
-    endX = (int)(startX) + ((int)(Math.random()*10));
-    endY = (int)(startY) + (9 +(int)(Math.random()*19));
-    startX = endX;
-    startY = endY;
-    line(startX,startY,endX,endY);
+    endX = 250;
+    float endY = 500;
+    float startX = 250;
+    float startY = 160;
   }
 }
